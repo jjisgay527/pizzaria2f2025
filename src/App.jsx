@@ -4,10 +4,12 @@ function App() {
 
   const [nome, setNome] = useState("memphis")
 
-  return (
-    <div>
-      <h3>Pizzaria 2f</h3>
-      <input className="nome"
+  const Formulario = () => {
+
+    return (
+      <div>
+      <input 
+      className="nome"
       name= "nome"
       onChange={(e)=>{nome=e.target.value}}
       placeholder="Digite um nome"
@@ -15,6 +17,19 @@ function App() {
       <button onClick={()=>{alert(nome)}}>
         CLIQUE AQUI
       </button>
+    </div>
+    
+      </div>
+    )
+  }
+
+  return (
+    <div>
+      <h3>Pizzaria 2F</h3>
+      <Formulario />
+      <Formulario />
+      <Formulario />
+
     </div>
   )
 }
